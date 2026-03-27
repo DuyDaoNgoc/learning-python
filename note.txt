@@ -1,0 +1,13 @@
+Đã làm:
+
+PART I
+Getting Started
+
+CHAPTER 3
+How You Run Programs
+
+Running Code Interactively (file script0. ,index.py )
+
+
+
+
