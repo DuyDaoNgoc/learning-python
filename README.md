@@ -1,19 +1,18 @@
-I. DONE
+<h1>I. DONE </h1>
 <ul>
  <b>Chapter 3</b>
 <li>
   Command-Line Usage Variations
 </li>
 </ul>
-
-II. IN-PROGRESS
+<h1>II. IN-PROGRESS</h1> 
  <li>
     <b>Chapter 3</b>
  </li>
-III. ISSUES
+<h1>III. ISSUES</h1>
 <li>None</li>
 
-IV. NEXT PLAN
+<h1>IV. NEXT PLAN</h1>
 <li>learning python:PART II
 Objects and Operations
 
