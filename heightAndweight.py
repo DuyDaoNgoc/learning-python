@@ -1,18 +1,14 @@
 def categorize(height, weight):
-    if height >= 180 and weight >= 80:
-        return "cao và chuppi."
-    elif height >= 180 and weight < 80:
-        return ""
-    elif height < 180 and weight >= 80:
-        return "cao bình thường nhưng chuppi."
-    elif height < 180 and weight < 80:
-        return "cao bình thường và không chuppi."
-    elif height <= 170   and weight >= 80:
-        return "cao bình thường nhưng chuppi."
-    elif height <= 170 and weight < 80:
-        return "cao bình thường và không chuppi."
-    elif height > 170 and weight >= 80:
-        return "cao bình thường và chuppi."
+    if height >= 180:
+        height_label = "cao"
+    elif height >= 170:
+        height_label = "cao bình thường"
+    else:
+        height_label = "lùn"
+
+    weight_label = "chuppi" if weight >= 80 else "không chuppi"
+
+    return f"{height_label} và {weight_label}." if height_label != "cao" else f"{height_label} và {weight_label}."
 
 # To handle multiple inputs, use a loop
 while True:
