@@ -14,6 +14,8 @@ while x and not found:
     if not found:
         print("Not found")
 
+
+
 OP = input("Enter operation (add, subtract): ")
 match OP:
     case "add":
@@ -23,8 +25,6 @@ match OP:
     case _:
         print("Unknown operation")
 
-
-
 option = input("Enter option (A, B, C): ")
 def match_option(option):
     title = "con gì ăn cỏ có 4 chân"
@@ -32,7 +32,7 @@ def match_option(option):
     B = "Con gà"
     C = "Con lợn"
     result = [A, B, C]
-    if title == A:
+    if title == "con gì ăn cỏ có 4 chân":
         if A == "Con bò" and B == "Con gà" and C == "Con lợn":
             match option:
                 case "A":

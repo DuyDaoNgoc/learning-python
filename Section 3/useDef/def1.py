@@ -62,3 +62,15 @@ try:
     attack(3)
 except ValueError as e:
     print(f"Error: {e}")
+
+
+def GoPlayer(name,lever):
+
+    if lever < 1000:
+        raise ValueError("Điểm elo thấp")
+    print(f"Player {name} has reached lever {lever}")
+try:
+    GoPlayer(name = input("nhập tên: "), lever = int(input("nhập điểm elo: ")))
+except ValueError as e:
+    print(f"Error: {e}")
+

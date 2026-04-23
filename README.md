@@ -5,7 +5,7 @@
   Command-Line Usage Variations
 </li>
 </ul>
-<h1>II. IN-PROGRESS</h1> 
+<h1>II. IN-PROGRESS</h1>
  <li>
     <b>Chapter 3</b>
  </li>
@@ -14,6 +14,5 @@
 
 <h1>IV. NEXT PLAN</h1>
 <li>learning python:PART II
-Objects and Operations
 
 </li>
