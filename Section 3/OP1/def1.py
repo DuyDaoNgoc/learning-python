@@ -53,9 +53,9 @@ for a in range(1):
             print(f"tính {"🦴" * (a+1) , "🦴" * (b+1) , "🤍" * (c + 1)} ")
 
 def attack(atk):
-    atk = 8
+    atk = 2
     if atk <5:
-        raise ValueError("Attack value too low")
+        raise ValueError("miss")
     print("Attack successful")
 
 try:
