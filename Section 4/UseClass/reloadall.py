@@ -1,5 +1,6 @@
 import types
 from importlib import reload
+
 def status(module):
     print(f"Reloading module: {module.__name__}")
 
@@ -18,6 +19,7 @@ def transitive_reload(module,visited):
     for attjob in module.__dict__.values():
         if type(attjob)==types.ModuleType:
             transitive_reload(attjob,visited)
+
 def reload_all(module):
     transitive_reload(module, {})
 def tester(reloader,module):
@@ -27,3 +29,22 @@ def tester(reloader,module):
     print(reloader(module_obj))
 if __name__ == "__main__":
     tester(reload_all,"reloadall3")
+
+op = []
+if op == reload_all:
+    print("op is reload_all")
+else:
+    print("op is not reload_all")
+
+modreload_all = tester(reload_all,"reloadall3")
+
+class cat :
+    Hoddy = "sleping"
+    age = 2
+pet = cat()
+attr = getattr(pet,"age")
+print("mồn lèo", attr, "tuổi ")
+ # repviwed and looks good. The code defines a mechanism to reload a module and all of its submodules recursively. It uses the
+ # `importlib.reload` function to reload modules and handles exceptions that may occur during the reload process. The `tester`
+ # function is used to test the `reload_all` function by importing a specified module and reloading it.
+
