@@ -1,0 +1,56 @@
+TÓM TẮT CÁC PHẦN
+
+Phần 1:
+- `import.py`: import các module và helper `reload` (reload + imports trong `UseReload`).
+- `threenames.py`: định nghĩa ba biến tên (`a`, `b`, `c`).
+- `UseReload/index.py`: in thư mục làm việc hiện tại.
+- `UseReload/script0.py`: thiết lập `language` và in lời chào.
+- `UseTitle/import2.py`: import `UseTitle.myfile` (ví dụ về tiêu đề).
+
+Phần 2:
+math/
+- `Numbers.py`: ví dụ cộng số nguyên (in tổng).
+- `NumbersPi.py`: in `math.pi` và ví dụ căn bậc hai.
+- `randoms.py`: demo `random.choices` với trọng số.
+- `string.py`: chuyển chuỗi thành list, sửa một phần, rồi join trở lại.
+range/
+- `IfAndEl.py`: chỗ giữ chỗ cho ví dụ `match`/`if` (import `match`).
+- `match.py`: hiện đang rỗng.
+
+Phần 3:
+OP1/
+- `def1.py`: hàm demo `Fetcher(item, count)`.
+- `heightAndweight.py`: phân loại chiều cao/cân nặng, có vòng nhập liệu tương tác.
+OP2/
+- `test.py`: ví dụ nhỏ `system()` (in tiến trình với ký hiệu trái tim).
+
+Phần 4:
+UseClass/
+- `reloadall.py`: công cụ reload module đệ quy dùng `importlib.reload`.
+- `reloadall2.py`: wrapper hỗ trợ cho logic reload.
+- `reloadall3.py`: lớp `Duy` và tester reload; có prompt tương tác.
+
+Phần 5:
+OP1/
+- `dualmode.py`: hàm `title()` và `name()`.
+- `python3.py`: import `dualmode` và in `title`.
+OP2/
+- `minmax.py`: thử nghiệm với hàm min/max và `math.fma`.
+OP3/
+- `mydir.py`: (rỗng)
+UseAlll/
+- `alls.py`, `alls2.py`: ví dụ `__all__` và `from ... import *`.
+UseGamod/
+- `gamod.py`, `gamod2.py`: demo `__getattr__`/`__dir__` ở mức module.
+UseUnders/
+- `unders.py`, `unders2.py`: ví dụ tên bắt đầu bằng gạch dưới và import.
+
+Phần 6 (thư mục: `section 6`):
+OP1/
+- `String.py`: cài đặt `square_root_bisection` (tìm căn bằng tìm kiếm nhị phân).
+OP2/
+- `password.py`: trình tạo mật khẩu an toàn (`secrets`, kiểm tra bằng regex).
+- `recursion.py`: lời giải Tháp Hà Nội tương tác (hỏi số đĩa và cột).
+- `shortestpath.py`: thuật toán đường ngắn nhất (kiểu Dijkstra), nhập điểm bắt đầu/đích tương tác.
+OP2/txt/
+- `password.txt`, `recursion.txt`, `shotespath.txt`: các ví dụ/đầu ra dạng văn bản có sẵn.

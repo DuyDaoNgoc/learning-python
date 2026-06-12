@@ -1,0 +1,52 @@
+Đệ quy:
+
+- Tạo biến NUMBER_OF_DISKS để nhập số lượng đĩa.
+
+- Tạo biến number_of_moves dùng công thức:
+  2 ** NUMBER_OF_DISKS - 1
+  để tính số bước tối thiểu cần di chuyển.
+
+- Tạo dictionary rods gồm 3 cột A, B, C.
+
+- Key A chứa danh sách đĩa:
+  list(range(NUMBER_OF_DISKS, 0, -1))
+
+  Ví dụ NUMBER_OF_DISKS = 3:
+  [3, 2, 1]
+
+  nghĩa là:
+  - bắt đầu từ NUMBER_OF_DISKS
+  - dừng trước 0
+  - bước nhảy -1
+
+- Key B và C là danh sách rỗng.
+
+- Kiểm tra điều kiện:
+  1 <= NUMBER_OF_DISKS <= 10
+
+- Khai báo hàm make_allowed_move(rod1, rod2)
+  để thực hiện nước đi hợp lệ giữa hai cột.
+
+- Tạo biến forward = False
+  dùng để kiểm tra hướng di chuyển.
+
+- Nếu cột rod2 rỗng:
+  forward = True
+
+- Hoặc nếu đĩa trên cùng của rod1 nhỏ hơn đĩa trên cùng của rod2:
+  forward = True
+
+- Nếu forward == True:
+  di chuyển đĩa từ rod1 sang rod2
+
+- Ngược lại:
+  di chuyển từ rod2 sang rod1
+
+- Hàm move() dùng vòng lặp for
+  để thực hiện toàn bộ quá trình giải Tower of Hanoi.
+
+- remainder = (i + 1) % 3
+  dùng để xác định cặp cột được phép di chuyển.
+
+- Nếu số đĩa là số lẻ:
+  thứ tự di chuyển khác số chẵn.

@@ -28,6 +28,28 @@ if __name__ == "__main__":
     tester(reload_all,"reloadall3")
 
 
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(f'{self.name} is eating')
+
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+
+    def eat(self):
+        print(f'{self.name} gâu gâu đang ăn')
+
+
+a = Animal('Generic animal')
+b = Dog('Buddy')
+
+a.eat()
+b.eat()
+
 
 # [/////////////////////////////////////////////////////////]
 # [//  /////////////////// ///////////              // /////]

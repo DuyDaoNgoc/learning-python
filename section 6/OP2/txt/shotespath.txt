@@ -1,0 +1,136 @@
+THUẬT TOÁN:Dijkstra
+
+- Tạo dictionary my_graph
+  để lưu đồ thị dưới dạng:
+  'đỉnh': [('đỉnh_kết_nối', khoảng_cách)]
+
+- Ví dụ:
+  'A': [('B', 5), ('C', 3)]
+
+  nghĩa là:
+  từ A đến B có khoảng cách 5
+  từ A đến C có khoảng cách 3
+
+- Khai báo hàm shortest_path(graph, start, target='')
+
+  + graph → đồ thị
+  + start → điểm bắt đầu
+  + target → điểm đích (có thể để trống)
+
+- Tạo biến:
+  unvisited = list(graph)
+
+  chứa danh sách các đỉnh chưa duyệt.
+
+- Tạo dictionary distances:
+
+  distances = {
+      node: 0 if node == start else float('inf')
+      for node in graph
+  }
+
+  + nếu node là điểm bắt đầu:
+    khoảng cách = 0
+
+  + các điểm khác:
+    khoảng cách = vô cực
+    bằng float('inf')
+
+- Tạo dictionary paths:
+
+  paths = {node: [] for node in graph}
+
+  dùng để lưu đường đi.
+
+- paths[start].append(start)
+
+  thêm điểm bắt đầu vào đường đi đầu tiên.
+
+- Dùng:
+  while unvisited:
+
+  để lặp cho tới khi duyệt hết các đỉnh.
+
+- current = min(unvisited, key=distances.get)
+
+  tìm đỉnh có khoảng cách nhỏ nhất
+  trong danh sách chưa duyệt.
+
+- Dùng:
+  for node, distance in graph[current]:
+
+  để duyệt các đỉnh kề current.
+
+- node
+  là đỉnh kết nối.
+
+- distance
+  là khoảng cách từ current tới node.
+
+- Kiểm tra:
+
+  if distance + distances[current] < distances[node]:
+
+  nếu tìm được đường đi ngắn hơn
+  thì cập nhật khoảng cách mới.
+
+- distances[node] = distance + distances[current]
+
+  cập nhật khoảng cách ngắn nhất.
+
+- Nếu paths[node]
+  đã có đường đi và phần tử cuối là node:
+
+  paths[node] = paths[current][:]
+
+  sao chép đường đi hiện tại.
+
+- Ngược lại:
+
+  paths[node].extend(paths[current])
+
+  nối thêm đường đi hiện tại.
+
+- paths[node].append(node)
+
+  thêm node vào cuối đường đi.
+
+- unvisited.remove(current)
+
+  xóa đỉnh đã duyệt khỏi danh sách.
+
+- targets_to_print = [target] if target else graph
+
+  + nếu có nhập target:
+    chỉ in điểm đó
+
+  + nếu để trống:
+    in tất cả đường đi.
+
+- Dùng:
+  for node in targets_to_print:
+
+  để duyệt các điểm cần in.
+
+- Nếu node == start:
+  continue
+
+  bỏ qua điểm bắt đầu.
+
+- print()
+
+  in:
+  + khoảng cách ngắn nhất
+  + đường đi ngắn nhất
+
+- return distances, paths
+
+  trả về:
+  + dictionary khoảng cách
+  + dictionary đường đi
+
+- shortest_path(...)
+
+  gọi hàm và cho người dùng nhập:
+  + điểm bắt đầu
+  + điểm kết thúc
